@@ -1,0 +1,15 @@
+{
+  "name": "simple-calculator",
+  "version": "1.0.0",
+  "description": "![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)\r ![Node.js](https://img.shields.io/badge/Node.js-14.x-green)\r ![Jest](https://img.shields.io/badge/Jest-Testing-blue)",
+  "main": "calc.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
