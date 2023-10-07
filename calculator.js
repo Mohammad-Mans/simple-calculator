@@ -26,6 +26,19 @@ function calc(...args) {
 
     isValidNumber(currentOperand);
 
+    if(args[0] > 1000){
+      if(currentOperand > 1000){
+        sum = 0;
+      }else{
+        sum = currentOperand;
+      }
+      continue;
+    }
+
+    if(currentOperand > 1000){
+      continue;
+    }
+
     switch (currentOperator) {
       case "+":
         sum += currentOperand;

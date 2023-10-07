@@ -79,5 +79,20 @@ describe('Calculator', () => {
     expect(calc(3 ,'+', 4 ,'/', 2 ,'*', 3 , '-' , 2)).toBe(7);
   });
 
-  
+  // Test case: ignore numbers bigger than 1000 (second operand)
+  it('should ignore numbers bigger than 1000 in case of second operand', ()=>{
+    expect(calc(2 ,'+', 1001)).toBe(2);
+  });
+
+  // Test case: ignore numbers bigger than 1000 (first operand)
+  it('should ignore numbers bigger than 1000 in case of first operand', ()=>{
+    expect(calc(1001 ,'+', 2)).toBe(2);
+  });
+
+  // Test case: ignore numbers bigger than 1000 (both operands)
+  it('should ignore numbers bigger than 1000 in case of both operands', ()=>{
+    expect(calc(1001 ,'+', 1002)).toBe(0);
+  });
+
+
 });
