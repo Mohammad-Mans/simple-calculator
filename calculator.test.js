@@ -51,4 +51,18 @@ describe('Calculator', () => {
   it('should throw an error for invalid input types', () => {
     expect(() => calc('2', '+', 3)).toThrow('Invalid input type');
   });
+
+  //--------new tests--------
+
+  // Test case: Order of operations (division and multiplication before subtraction)
+  it('Should prioritize division and multiplication over subtraction', ()=>{
+    expect(calc(3, '-', 4, '/', 2 ,'*',3)).toBe(-3);
+  });
+
+  // Test case: Order of operations (division and multiplication before addition)
+  it('Should prioritize division and multiplication over addition', ()=>{
+    expect(calc(3, '+', 4, '/', 2 ,'*',3)).toBe(9);
+  });
+
+  
 });
