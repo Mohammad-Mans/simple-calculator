@@ -64,5 +64,20 @@ describe('Calculator', () => {
     expect(calc(3, '+', 4, '/', 2 ,'*',3)).toBe(9);
   });
 
+  // Test case: handle an unknown amount of numbers (less than 3 arguments)
+  it('should throw an Invalid input error for arguments less than 3', ()=>{
+    expect(() => calc(2, '+')).toThrow('Invalid input');
+  });
+
+  // Test case: handle an unknown amount of numbers (operator without opearand)
+  it('should throw an Invalid input error for even numbered arguments', ()=>{
+    expect(() => calc(2, '+', 3 ,'-')).toThrow('Invalid input');
+  });
+
+  // Test case: handle an unknown amount of numbers (more than 3 arguments)
+  it('should handle an unknown amount of numbers', ()=>{
+    expect(calc(3 ,'+', 4 ,'/', 2 ,'*', 3 , '-' , 2)).toBe(7);
+  });
+
   
 });
